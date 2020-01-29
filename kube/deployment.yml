@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tapps-io-cms
+  namespace: default
+  labels:
+    app: tapps-io-cms
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tapps-io-cms
+  template:
+    metadata:
+      labels:
+        app: tapps-io-cms
+    spec:
+      containers:
+        - name: tapps-io-cms
+          image: tapps/tapps-io.cms:$VERSION
+          ports:
+            - containerPort: 1337
+              name: cms
+          env:
+            - name: DATABASE_CLIENT
+              value: postgres
+
+            - name: DATABASE_HOST
+              value: EXTERNAL_POSTGRESQL_SERVICE_HOST
+
+            - name: DATABASE_PORT
+              value: EXTERNAL_POSTGRESQL_SERVICE_PORT_DB
+
+            - name: DATABASE_NAME
+              value: strapi
+
+            - name: DATABASE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: external-postgresql-strapi
+                  key: username
+              value: strapi
+
+            - name: DATABASE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: external-postgresql-strapi
+                  key: password

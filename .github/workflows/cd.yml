@@ -1,0 +1,65 @@
+name: Continuous Delivery
+
+on:
+  push:
+    branches:
+      - master
+      - release/*
+
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2-beta
+
+      - name: Setup Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+          registry-url: https://npm.pkg.github.com
+          scope: tapps-io
+
+      - name: Install dependencies as CI
+        run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Run semantic release
+        run: npm run release -- -ci
+        env:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+
+      - name: Update deployment version
+        run: |
+          sed 's|$VERSION|'$VERSION'|g' $DEPLOYMENT_FILE | diff $DEPLOYMENT_FILE - || true
+          sed -i 's|$VERSION|'$VERSION'|g' $DEPLOYMENT_FILE
+        if: env.VERSION != null
+        env:
+          DEPLOYMENT_FILE: ${{ format('{0}/kube/deployment.yml', github.workspace) }}
+
+      - name: Create DigitalOcean Kubernetes certifcate
+        run: |
+          echo "$CERT" > $CERT_FILE
+          echo "Certificate written to $CERT_FILE"
+          echo "::set-env name=CERT_FILE::$CERT_FILE"
+        if: env.VERSION != null
+        env:
+          CERT: ${{ secrets.KUBERNETES_CLUSTER_CERTIFICATE }}
+          CERT_FILE: ${{ format('{0}/kube/cert.crt', github.workspace) }}
+
+      - name: Deploy to DigitalOcean Kubernetes
+        run: kubectl --kubeconfig=/dev/null -s=$SERVER --certificate-authority=$CERT_FILE --token=$TOKEN apply -f $GITHUB_WORKSPACE/kube/
+        if: env.VERSION != null
+        env:
+          TOKEN: ${{ secrets.KUBERNETES_TOKEN }}
+          SERVER: ${{ secrets.KUBERNETES_SERVER }}
+
+      - name: Verify DigitalOcean deployment
+        run: kubectl --kubeconfig=/dev/null -s=$SERVER --certificate-authority=$CERT_FILE --token=$TOKEN rollout status deployment/tapps-io-cms
+        if: env.VERSION != null
+        env:
+          TOKEN: ${{ secrets.KUBERNETES_TOKEN }}
+          SERVER: ${{ secrets.KUBERNETES_SERVER }}

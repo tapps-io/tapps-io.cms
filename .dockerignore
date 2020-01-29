@@ -1,0 +1,8 @@
+*
+!api
+!build
+!config
+!extensions
+!public
+!package*.json
+!server.js

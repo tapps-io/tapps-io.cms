@@ -1,0 +1,34 @@
+{
+  "dryRun": false,
+  "ci": false,
+  "plugins": [
+    [
+      "@semantic-release/commit-analyzer",
+      {
+        "config": "./tools/changelog.js"
+      }
+    ],
+    [
+      "@semantic-release/release-notes-generator",
+      {
+        "config": "./tools/changelog.js"
+      }
+    ],
+    "@semantic-release/changelog",
+    [
+      "@semantic-release/exec",
+      {
+        "prepareCmd": "NODE_ENV=production npm run build && npm run build:docker",
+        "successCmd": "echo \"::set-env name=VERSION::${nextRelease.version}\""
+      }
+    ],
+    "@semantic-release/npm",
+    [
+      "semantic-release-docker",
+      {
+        "name": "tapps/tapps-io.cms"
+      }
+    ],
+    "@semantic-release/git"
+  ]
+}
