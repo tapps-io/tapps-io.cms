@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/tapps-io/tapps-io.cms/compare/v1.0.1...v1.0.2) (2020-01-29)
+
+
+### Bug Fixes
+
+* incorrect value and environmental variables ([6c12719](https://github.com/tapps-io/tapps-io.cms/commit/6c1271951e335e680775f6d022e8989704b6c056))
+
 ## [1.0.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.0.0...v1.0.1) (2020-01-29)
 
 
