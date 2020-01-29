@@ -9,6 +9,10 @@
     "enabled": false
   },
   "admin": {
-    "autoOpen": false
+    "autoOpen": false,
+    "path": "/",
+    "build": {
+      "backend": "https://cms.tapps.io"
+    }
   }
 }

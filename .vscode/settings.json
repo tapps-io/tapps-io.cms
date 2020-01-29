@@ -1,0 +1,24 @@
+{
+  //"css.validate": false,
+  "docthis.includeMemberOfOnClassMembers": false,
+  "docthis.includeMemberOfOnInterfaceMembers": false,
+  "files.insertFinalNewline": true,
+  "html.format.wrapAttributes": "force",
+  //"scss.validate": false,
+  "search.exclude": {
+    "**/package-lock.json": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/docs": true
+  },
+  "files.associations": {
+    //".stylelintrc": "json",
+    ".releaserc": "jsonc"
+  },
+  //"stylelint.enable": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": false,
+  "typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "javascript.preferences.importModuleSpecifier": "relative"
+}
