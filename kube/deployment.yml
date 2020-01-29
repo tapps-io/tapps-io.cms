@@ -23,23 +23,16 @@ spec:
               name: cms
           env:
             - name: DATABASE_CLIENT
-              value: postgres
-
-            - name: DATABASE_HOST
-              value: EXTERNAL_POSTGRESQL_SERVICE_HOST
-
-            - name: DATABASE_PORT
-              value: EXTERNAL_POSTGRESQL_SERVICE_PORT_DB
+              value: "postgres"
 
             - name: DATABASE_NAME
-              value: strapi
+              value: "strapi"
 
             - name: DATABASE_USERNAME
               valueFrom:
                 secretKeyRef:
                   name: external-postgresql-strapi
                   key: username
-              value: strapi
 
             - name: DATABASE_PASSWORD
               valueFrom:
