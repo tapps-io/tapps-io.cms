@@ -1,30 +1,31 @@
 {
-  "name": "@tapps-io/cms",
-  "private": true,
+  "name": "@tapps-io/tapps-io.cms",
   "version": "0.1.0",
-  "description": "A Strapi application",
-  "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi"
-  },
-  "devDependencies": {},
-  "dependencies": {
-    "strapi": "3.0.0-beta.18.6",
-    "strapi-admin": "3.0.0-beta.18.6",
-    "strapi-utils": "3.0.0-beta.18.6",
-    "strapi-plugin-content-type-builder": "3.0.0-beta.18.6",
-    "strapi-plugin-content-manager": "3.0.0-beta.18.6",
-    "strapi-plugin-users-permissions": "3.0.0-beta.18.6",
-    "strapi-plugin-email": "3.0.0-beta.18.6",
-    "strapi-plugin-upload": "3.0.0-beta.18.6",
-    "strapi-connector-bookshelf": "3.0.0-beta.18.6",
-    "knex": "<0.20.0",
-    "sqlite3": "latest"
-  },
+  "private": true,
+  "keywords": [
+    "tapps",
+    "cms"
+  ],
+  "description": "Content management system in charge of delivering headless data to the frontend client",
   "author": {
-    "name": "A Strapi developer"
+    "name": "Trutoo AB",
+    "url": "https://www.trutoo.com/"
+  },
+  "license": "GPL-3.0",
+  "repository": "git://github.com/tapps-io/tapps-io.cms.git",
+  "bugs": "https://github.com/tapps-io/tapps-io.cms/issues",
+  "contributors": [
+    {
+      "name": "Erik Hughes",
+      "email": "erik.hughes@outlook.com",
+      "url": "https://github.com/swiftwork"
+    }
+  ],
+  "main": "server.js",
+  "husky": {
+    "hooks": {
+      "commit-msg": "node tools/commit-msg.js"
+    }
   },
   "strapi": {
     "uuid": "bc407e89-8fb0-4cea-9bfd-d150e50697be"
@@ -33,5 +34,29 @@
     "node": ">=10.0.0",
     "npm": ">=6.0.0"
   },
-  "license": "MIT"
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "build:docker": "docker build -t tapps/tapps-io.cms .",
+    "release": "semantic-release",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "knex": "<0.20.0",
+    "sqlite3": "latest",
+    "strapi": "3.0.0-beta.18.6",
+    "strapi-admin": "3.0.0-beta.18.6",
+    "strapi-connector-bookshelf": "3.0.0-beta.18.6",
+    "strapi-plugin-content-manager": "3.0.0-beta.18.6",
+    "strapi-plugin-content-type-builder": "3.0.0-beta.18.6",
+    "strapi-plugin-email": "3.0.0-beta.18.6",
+    "strapi-plugin-graphql": "3.0.0-beta.18.6",
+    "strapi-plugin-upload": "3.0.0-beta.18.6",
+    "strapi-plugin-users-permissions": "3.0.0-beta.18.6",
+    "strapi-utils": "3.0.0-beta.18.6"
+  },
+  "devDependencies": {
+    "husky": "4.2.1"
+  }
 }
