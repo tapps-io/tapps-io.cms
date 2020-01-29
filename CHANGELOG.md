@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.0.0...v1.0.1) (2020-01-29)
+
+
+### Bug Fixes
+
+* trigger ci build and version bump ([4c2b598](https://github.com/tapps-io/tapps-io.cms/commit/4c2b598f9a83839191a7137fce5c795f7c3f6b68))
+
 # 1.0.0 (2020-01-29)
 
 
