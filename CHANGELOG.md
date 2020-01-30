@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.1.2...v1.2.0) (2020-01-30)
+
+
+### Features
+
+* simplified routing ([1ade8e1](https://github.com/tapps-io/tapps-io.cms/commit/1ade8e1f3cfc32b48c3cd40b345fbbbebb0662e9))
+
 ## [1.1.2](https://github.com/tapps-io/tapps-io.cms/compare/v1.1.1...v1.1.2) (2020-01-30)
 
 
