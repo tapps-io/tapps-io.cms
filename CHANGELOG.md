@@ -1,3 +1,11 @@
+# [1.3.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.2.1...v1.3.0) (2020-01-30)
+
+
+### Features
+
+* added pg driver ([0107123](https://github.com/tapps-io/tapps-io.cms/commit/0107123307837b7a1db327b825cced81bd0685ff))
+* added test endpoint tapp ([ea25e55](https://github.com/tapps-io/tapps-io.cms/commit/ea25e55cacdae839b6d307d314da704e96e4cecb))
+
 ## [1.2.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.2.0...v1.2.1) (2020-01-30)
 
 
