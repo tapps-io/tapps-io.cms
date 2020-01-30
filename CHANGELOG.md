@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/tapps-io/tapps-io.cms/compare/v1.1.1...v1.1.2) (2020-01-30)
+
+
+### Bug Fixes
+
+* added host and admin host env vars ([74cf7b4](https://github.com/tapps-io/tapps-io.cms/commit/74cf7b4c09aa0d196f22c457d19a25094b1b0a16))
+
 ## [1.1.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.1.0...v1.1.1) (2020-01-30)
 
 
