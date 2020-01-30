@@ -20,6 +20,10 @@ RUN apk --no-cache --virtual build-dependencies add \
 # Copy remaining bundle
 COPY . .
 
+# Remap environmental variables
+ENV DATABASE_HOST=EXTERNAL_POSTGRESQL_SERVICE_HOST
+ENV DATABASE_PORT=EXTERNAL_POSTGRESQL_SERVICE_PORT
+
 EXPOSE 1337
 
 CMD [ "node", "./server.js"]
