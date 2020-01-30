@@ -9,10 +9,6 @@
     "enabled": false
   },
   "admin": {
-    "autoOpen": false,
-    "path": "/",
-    "build": {
-      "backend": "${process.env.ADMIN_HOST || process.env.HOST || '127.0.0.1'}"
-    }
+    "autoOpen": false
   }
 }

@@ -23,16 +23,16 @@ spec:
               name: cms
           env:
             - name: HOST
-              value: "https://tapps.io"
+              value: https://content.tapps.io
 
-            - name: ADMIN_HOST
-              value: "https://cms.tapps.io"
+            - name: NODE_ENV
+              value: production
 
             - name: DATABASE_CLIENT
-              value: "postgres"
+              value: postgres
 
             - name: DATABASE_NAME
-              value: "strapi"
+              value: strapi
 
             - name: DATABASE_USERNAME
               valueFrom:

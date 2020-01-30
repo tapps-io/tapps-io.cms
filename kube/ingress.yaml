@@ -10,17 +10,18 @@ metadata:
     app: tapps-io-cms
 spec:
   rules:
-    - host: tapps.io
+    # Alternative route using API
+    - host: api.tapps.io
       http:
         paths:
-          - path: /api/content/?(.*)
+          - path: /content/?(.*)
             backend:
               serviceName: tapps-io-cms
               servicePort: http
-    - host: cms.tapps.io
+    - host: content.tapps.io
       http:
         paths:
-          - path: /
+          - path: /?(.*)
             backend:
               serviceName: tapps-io-cms
               servicePort: http
