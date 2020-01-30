@@ -1,0 +1,16 @@
+{
+  "connection": "default",
+  "collectionName": "tapps",
+  "info": {
+    "name": "Tapp"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    }
+  }
+}
