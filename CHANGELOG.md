@@ -1,3 +1,20 @@
+# [1.1.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.0.2...v1.1.0) (2020-01-30)
+
+
+### Bug Fixes
+
+* removed tls responsibilities ([2023101](https://github.com/tapps-io/tapps-io.cms/commit/2023101e1ebc796412ba23d110e1d8e8b0b0364b))
+
+
+### Code Refactoring
+
+* extension update yml -> yaml ([83bdbf3](https://github.com/tapps-io/tapps-io.cms/commit/83bdbf3ab1387d435605713a6cb996174dce122c))
+
+
+### Features
+
+* remapped env variables ([60c74f3](https://github.com/tapps-io/tapps-io.cms/commit/60c74f3a9b7486e96e8fca35ecfcf77f4e19be06))
+
 ## [1.0.2](https://github.com/tapps-io/tapps-io.cms/compare/v1.0.1...v1.0.2) (2020-01-29)
 
 
