@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.2.0...v1.2.1) (2020-01-30)
+
+
+### Bug Fixes
+
+* added ssl ([35e1488](https://github.com/tapps-io/tapps-io.cms/commit/35e14881f6b950ac42a2cc0e473f1f601f354c69))
+
 # [1.2.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.1.2...v1.2.0) (2020-01-30)
 
 
