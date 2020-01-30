@@ -1,3 +1,16 @@
+## [1.1.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.1.0...v1.1.1) (2020-01-30)
+
+
+### Bug Fixes
+
+* trigger release ([d099720](https://github.com/tapps-io/tapps-io.cms/commit/d099720c9a7aca3fe562c4053390b169e3b79177))
+
+
+### Continuous Integration
+
+* added fallback if version released but not deployed ([be6859c](https://github.com/tapps-io/tapps-io.cms/commit/be6859c8be16e569a6b213a818c2a06083173e6e))
+* fixed broken deployment path ([3caa2b9](https://github.com/tapps-io/tapps-io.cms/commit/3caa2b9a3f5e490884b39c3958db26a34eb9cbd8))
+
 # [1.1.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.0.2...v1.1.0) (2020-01-30)
 
 
