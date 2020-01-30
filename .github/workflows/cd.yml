@@ -38,7 +38,7 @@ jobs:
           sed -i 's|$VERSION|'$VERSION'|g' $DEPLOYMENT_FILE
         if: env.VERSION != null
         env:
-          DEPLOYMENT_FILE: ${{ format('{0}/kube/deployment.yaml', github.workspace) }}
+          DEPLOYMENT_FILE: ${{ format('{0}/kube/deployment.yml', github.workspace) }}
 
       - name: Create DigitalOcean Kubernetes certifcate
         run: |

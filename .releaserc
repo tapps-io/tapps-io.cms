@@ -18,7 +18,6 @@
     [
       "@semantic-release/exec",
       {
-        "analyzeCommitsCmd": "echo \"::set-env name=VERSION::${lastRelease.version}\"",
         "prepareCmd": "NODE_ENV=production npm run build && npm run build:docker",
         "successCmd": "echo \"::set-env name=VERSION::${nextRelease.version}\""
       }
