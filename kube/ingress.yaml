@@ -4,7 +4,7 @@ metadata:
   name: tapps-io-cms
   namespace: default
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /$2
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
     kubernetes.io/ingress.class: "nginx"
   labels:
     app: tapps-io-cms
@@ -13,7 +13,7 @@ spec:
     - host: tapps.io
       http:
         paths:
-          - path: /api/content(/|$)(.*)
+          - path: /api/content/?(.*)
             backend:
               serviceName: tapps-io-cms
               servicePort: http

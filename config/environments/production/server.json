@@ -12,7 +12,7 @@
     "autoOpen": false,
     "path": "/",
     "build": {
-      "backend": "https://cms.tapps.io"
+      "backend": "${process.env.ADMIN_HOST || process.env.HOST || '127.0.0.1'}"
     }
   }
 }

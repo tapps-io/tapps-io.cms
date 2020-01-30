@@ -22,6 +22,12 @@ spec:
             - containerPort: 1337
               name: cms
           env:
+            - name: HOST
+              value: "https://tapps.io"
+
+            - name: ADMIN_HOST
+              value: "https://cms.tapps.io"
+
             - name: DATABASE_CLIENT
               value: "postgres"
 
