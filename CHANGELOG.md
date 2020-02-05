@@ -1,3 +1,11 @@
+# [1.4.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.3.0...v1.4.0) (2020-02-05)
+
+
+### Features
+
+* **sponsor:** added new content type sponsor ([4260c2d](https://github.com/tapps-io/tapps-io.cms/commit/4260c2d116e08e65f166e35edfdc0395cefd37f9))
+* **tapp:** added new fields ([4dff05a](https://github.com/tapps-io/tapps-io.cms/commit/4dff05a6a5b9c1d9d23a5938f938d4f611eb45bf))
+
 # [1.3.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.2.1...v1.3.0) (2020-01-30)
 
 
