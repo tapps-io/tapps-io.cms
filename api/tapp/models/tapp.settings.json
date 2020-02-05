@@ -9,8 +9,22 @@
     "timestamps": true
   },
   "attributes": {
+    "tapp": {
+      "type": "string",
+      "unique": true,
+      "required": true
+    },
+    "semver": {
+      "type": "string",
+      "required": true
+    },
     "title": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "maxLength": 128
+    },
+    "description": {
+      "type": "richtext"
     }
   }
 }
