@@ -2,7 +2,7 @@
   "connection": "default",
   "collectionName": "tapps",
   "info": {
-    "name": "Tapp"
+    "name": "tapp"
   },
   "options": {
     "increments": true,
@@ -25,6 +25,13 @@
     },
     "description": {
       "type": "richtext"
+    },
+    "sponsor": {
+      "model": "sponsor"
+    },
+    "categories": {
+      "via": "tapps",
+      "collection": "category"
     }
   }
 }

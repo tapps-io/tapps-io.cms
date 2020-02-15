@@ -2,14 +2,14 @@
   "connection": "default",
   "collectionName": "sponsors",
   "info": {
-    "name": "Sponsor"
+    "name": "sponsor"
   },
   "options": {
     "increments": true,
     "timestamps": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
       "unique": true,
       "required": true
