@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.4.0...v1.5.0) (2020-02-15)
+
+
+### Features
+
+* added categories and renamed sponsor / tapp ([dee2e95](https://github.com/tapps-io/tapps-io.cms/commit/dee2e9568bba860127352c1e3f0db400b56b50dc))
+
 # [1.4.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.3.0...v1.4.0) (2020-02-05)
 
 
