@@ -9,13 +9,14 @@
     "timestamps": true
   },
   "attributes": {
-    "title": {
+    "name": {
       "type": "string",
       "unique": true,
       "required": true
     },
     "link": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

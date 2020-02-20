@@ -35,8 +35,8 @@
     "npm": ">=6.0.0"
   },
   "scripts": {
-    "develop": "strapi develop",
-    "start": "strapi start",
+    "start": "strapi develop",
+    "start:dist": "strapi start",
     "build": "strapi build",
     "build:docker": "docker build -t tapps/tapps-io.cms .",
     "release": "semantic-release",
