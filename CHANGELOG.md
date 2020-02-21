@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.5.1...v1.6.0) (2020-02-21)
+
+
+### Features
+
+* added semver validation beforeSave ([11917df](https://github.com/tapps-io/tapps-io.cms/commit/11917df008ca682c9833035d0b2a3eeb9e377e86))
+
 ## [1.5.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.5.0...v1.5.1) (2020-02-20)
 
 
