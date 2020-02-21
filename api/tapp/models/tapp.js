@@ -1,4 +1,6 @@
-'use strict';
+"use strict";
+
+const semver = require("semver");
 
 /**
  * Lifecycle callbacks for the `tapp` model.
@@ -7,7 +9,10 @@
 module.exports = {
   // Before saving a value.
   // Fired before an `insert` or `update` query.
-  // beforeSave: async (model, attrs, options) => {},
+  beforeSave: async (model, attrs, options) => {
+    if (attrs.semver && !semver.validRange(attrs.semver))
+      throw strapi.errors.badRequest("Semver is invalid");
+  }
 
   // After saving a value.
   // Fired after an `insert` or `update` query.
