@@ -1,3 +1,10 @@
+## [1.5.1](https://github.com/tapps-io/tapps-io.cms/compare/v1.5.0...v1.5.1) (2020-02-20)
+
+
+### Bug Fixes
+
+* minor refactoring ([a1d07bf](https://github.com/tapps-io/tapps-io.cms/commit/a1d07bfe734fd575ed6266cb725ff7335d0916ff))
+
 # [1.5.0](https://github.com/tapps-io/tapps-io.cms/compare/v1.4.0...v1.5.0) (2020-02-15)
 
 
